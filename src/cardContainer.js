@@ -1,12 +1,19 @@
 import React from 'react';
-import customData from './data.json/';
+import Card from'./Card.js/';
 
-let data = {customData};
-const CardContainer =(data)=> {
-console.log(data)
-    return(
-        <div>CardContainer</div>
-    )
+let data = require('./data.json');
 
-}
+const CardContainer =()=> {
+
+    return (
+    data.map(unemployed=>{
+        return(
+            <Card unemployed={unemployed}/>
+        )
+    }
+
+    ))}
+    
+
+
 export default CardContainer
