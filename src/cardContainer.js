@@ -1,14 +1,14 @@
 import React from 'react';
-import Card from'./Card.js/';
+import Card from './Card.js';
 
-let data = require('./data.json');
 
-const CardContainer =()=> {
 
+const CardContainer =(props)=> {
+console.log(props.data)
     return (
-    data.map(unemployed=>{
+    props.data.map(unemployed=>{
         return(
-            <Card unemployed={unemployed}/>
+            <Card unemployed={unemployed} key ={unemployed.id}/>
         )
     }
 
