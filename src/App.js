@@ -9,7 +9,9 @@ function App() {
     <header>
 <Header className = 'header col-4'/>
       </header>
+      <div className ="CardWrapper">
       <CardContainer data ={data}/>
+      </div>
       </div>
   );
 }

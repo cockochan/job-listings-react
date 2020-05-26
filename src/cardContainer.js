@@ -8,7 +8,9 @@ console.log(props.data)
     return (
     props.data.map(unemployed=>{
         return(
-            <Card unemployed={unemployed} key ={unemployed.id}/>
+         
+            <Card unemployed={unemployed} key ={unemployed.id} />
+            
         )
     }
 
