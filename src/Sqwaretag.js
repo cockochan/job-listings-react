@@ -6,7 +6,7 @@ const Sqwaretag = (props)=>{
         <div className ="SqwaretagContainer row">
     {props.unemployed.languages.map(language=>{
         return(
-            <div className="Sqwaretag">
+            <div className="Sqwaretag" key={props.unemployed.id}>
                 {language}
             </div>   
     )}
