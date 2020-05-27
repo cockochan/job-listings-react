@@ -26,6 +26,7 @@
   align-content: center;
   box-shadow: 10px 10px 8px hsl(180, 29%, 50%);
   margin:15px;
+  
 }
 .logo{
   width:15vh;
@@ -35,6 +36,7 @@
 }
 .descriptiveTags{
   justify-content: space-evenly;
+  font-weight: 300!important;
 }
 .SqwaretagContainer{
   display:flex;
@@ -60,11 +62,13 @@ background-color:hsl(180, 8%, 52%);
 .aboutBlock{
   display:flex;
   flex-direction:column;
-  justify-content: space-between;
+  justify-items: left;
 }
 .descriptiveTags{
   justify-content: center;
   justify-content: space-evenly;
+  justify-content: left;
+  margin-left:-5px;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -100,7 +104,29 @@ background-color:hsl(180, 8%, 52%);
 }
 .position{
   font-weight: 700;
+  justify-content: left;
+}
+.nowrap{
+  flex-wrap:nowrap;
+  font-weight: 300;
+ 
+  margin: 5px;
+  color: hsl(180, 8%, 52%);
+  
+}
+.companyName{
+  color:hsl(180, 29%, 50%);
+}
+span{
+  display:flex;
+  justify-content: left;
 }
 p{
-  flex-wrap:nowrap;
+
+    display:flex;
+    justify-content: left;
+
+}
+.contract{
+  font-weight: 300!important;
 }

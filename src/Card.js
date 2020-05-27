@@ -8,18 +8,21 @@ return(
 
         <img src ={source} className = "logo col-4" alt ='nothing to see here anyway' ></img>
         
-        <div className="aboutBlock col-4">
+        <div className="aboutBlock col-5">
+            <span className='companyName'>
+            {props.unemployed.company}
+            </span>
             <div className='labels'>
             </div>
             <p className ='position'>
                 {props.unemployed.position}
             </p>
             
-            <span className = 'descriptiveTags row'>
-                <p className = 'contract col-1'> {props.unemployed.contract}</p>
-                <p className = 'posted col-1'> {props.unemployed.postedAt}</p>
-                <p className = 'location col-1'> {props.unemployed.location}</p>
-            </span>
+            <p className = 'descriptiveTags row'>
+                <span className = 'contract  nowrap'> {props.unemployed.contract }&#9679;</span>
+                <span className = 'posted nowrap'> {props.unemployed.postedAt }&#9679;	</span>
+                <span className = 'location  nowrap'> {props.unemployed.location}</span>
+            </p>
             </div>
             <div className ='tagContainer col-4'>
                 <Sqwaretag unemployed={props.unemployed}></Sqwaretag>
