@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -7,18 +8,24 @@
   pointer-events: none;
 }
 .CardWrapper{
+  font-family: 'Spartan', sans-serif;
+  
   display:flex;
   flex-direction: column;
   justify-content: center;
+  background-color: hsl(180, 52%, 96%) ;
 }
 .Card{
   display:flex;
   height:auto;
   justify-content: space-between;
   align-items: center;
+  padding:5px;
   padding-right:30px;
-  border:1px black solid;
+  border:none;
   align-content: center;
+  box-shadow: 10px 10px 8px hsl(180, 29%, 50%);
+  margin:15px;
 }
 .logo{
   width:15vh;
@@ -38,8 +45,17 @@
 }
 .Sqwaretag{
   margin:5px;
-  border:1px black solid;
+  border:1px white solid;
+  
+padding:5px;
+color:hsl(180, 8%, 52%);
+background-color:hsl(180, 31%, 95%);
 
+}
+.Sqwaretag:hover {
+  background-color: yellow;
+  color:white;
+background-color:hsl(180, 8%, 52%);
 }
 .aboutBlock{
   display:flex;
@@ -81,4 +97,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+.position{
+  font-weight: 700;
+}
+p{
+  flex-wrap:nowrap;
 }
