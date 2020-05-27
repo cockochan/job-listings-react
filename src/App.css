@@ -12,20 +12,26 @@
   justify-content: center;
 }
 .Card{
- 
+  display:flex;
   height:auto;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  padding-right:30px;
+  border:1px black solid;
+  align-content: center;
 }
 .logo{
-  width:30%;
+  width:15vh;
   border-radius: 50%;
+  align-self: flex-start;
 
 }
 .descriptiveTags{
   justify-content: space-evenly;
 }
 .SqwaretagContainer{
+  display:flex;
+  flex-direction:row;
   justify-content: space-evenly;
   width:auto;
 
@@ -36,10 +42,13 @@
 
 }
 .aboutBlock{
-  justify-self: center;
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
 }
 .descriptiveTags{
   justify-content: center;
+  justify-content: space-evenly;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

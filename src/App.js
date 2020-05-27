@@ -7,7 +7,7 @@ function App() {
   return (
     <div className ='App'>
     <header>
-<Header className = 'header col-4'/>
+<Header className = 'header'/>
       </header>
       <div className ="CardWrapper">
       <CardContainer data ={data}/>
