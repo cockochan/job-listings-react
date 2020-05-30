@@ -9,9 +9,14 @@ return(
         <img src ={source} className = "logo col-4" alt ='nothing to see here anyway' ></img>
         
         <div className="aboutBlock col-5">
+            <div className = 'compannyNew'>
             <span className='companyName'>
             {props.unemployed.company}
             </span>
+            <div className ='tagsNew'>
+            {/* {props.unemployed.new? return (<div className = 'squareTag'>new</div>}) */}
+            </div>
+            </div>
             <div className='labels'>
             </div>
             <p className ='position'>
