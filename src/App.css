@@ -59,29 +59,6 @@ background-color:hsl(180, 31%, 95%);
   color:white;
 background-color:hsl(180, 8%, 52%);
 }
-.Sqwaretag2{
-  margin:5px;
-  border:1px white solid;
-  
-padding:5px;
-color:hsl(180, 8%, 52%);
-background-color:hsl(180, 31%, 95%);
-
-}
-.Sqwaretag2{
-  margin:5px;
-  border:1px white solid;
-  
-padding:5px;
-color:hsl(180, 8%, 52%);
-background-color:black;
-
-}
-.Sqwaretag2:hover {
-  background-color: yellow;
-  color:white;
-background-color:hsl(180, 8%, 52%);
-}
 .aboutBlock{
   display:flex;
   flex-direction:column;
@@ -92,14 +69,6 @@ background-color:hsl(180, 8%, 52%);
   justify-content: space-evenly;
   justify-content: left;
   margin-left:-5px;
-}
-
-.tagsNew{
-  display:flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
- 
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
