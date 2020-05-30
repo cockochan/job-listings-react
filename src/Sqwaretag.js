@@ -10,12 +10,9 @@ const Sqwaretag = (props)=>{
             <div className="Sqwaretag" key={props.unemployed.id}>
                 {language}
             </div>   
-    )},
-     
+    )}
   
     )}
-    <div className="Sqwaretag">{props.unemployed.level}</div>
-    <div className="Sqwaretag">{props.unemployed.role}</div>
     </div>
     )}
     
