@@ -73,8 +73,17 @@ background-color:hsl(180, 31%, 95%);
   border:1px white solid;
   
 padding:5px;
-color:hsl(180, 8%, 52%);
+color:white;
 background-color:black;
+
+}
+.Sqwaretag3{
+  margin:5px;
+  border:1px white solid;
+  
+padding:5px;
+color:white;
+background-color:  hsl(180, 29%, 50%);
 
 }
 .Sqwaretag2:hover {
