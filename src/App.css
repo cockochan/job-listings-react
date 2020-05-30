@@ -71,6 +71,7 @@ background-color:hsl(180, 31%, 95%);
 .Sqwaretag2{
   margin:5px;
   border:1px white solid;
+  border-radius: 15px;
   
 padding:5px;
 color:white;
@@ -80,6 +81,7 @@ background-color:black;
 .Sqwaretag3{
   margin:5px;
   border:1px white solid;
+  border-radius: 15px;
   
 padding:5px;
 color:white;
@@ -128,7 +130,7 @@ background-color:hsl(180, 8%, 52%);
 }
 .header{
   width:100%;
-  background-color:hsl(180, 8%, 52%);
+  background-color: hsl(180, 29%, 50%);
 }
 .App-link {
   color: #61dafb;

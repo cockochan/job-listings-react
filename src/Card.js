@@ -10,7 +10,7 @@ const Card = (props) => {
 
             <div className="aboutBlock col-5">
                 
-                <div className='tagsNew row'>
+                <div className='tagsNew '>
                 <span className='companyName'>
                        
                         
