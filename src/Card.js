@@ -2,7 +2,7 @@ import React from 'react';
 import Sqwaretag from './Sqwaretag'
 const Card = (props) => {
     let source = props.unemployed.logo;
-    console.log(source)
+  
     return (
         <div key={props.unemployed.id} className='Card row'>
 
@@ -38,8 +38,8 @@ const Card = (props) => {
                     <span className='location  nowrap'> {props.unemployed.location}</span>
                 </p>
             </div>
-            <div className='tagContainer col-4'>
-                <Sqwaretag unemployed={props.unemployed}></Sqwaretag>
+            <div className='tagContainer col-4' key ='props.unemployed.id'>
+                <Sqwaretag handleFilterButton={props.handleFilterButton} unemployed={props.unemployed}></Sqwaretag>
             </div>
 
 
