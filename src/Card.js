@@ -17,7 +17,7 @@ const Card = (props) => {
                         {props.unemployed.company}
                     </span>
                     
-                            {(props.unemployed.new) ? (<div className='Sqwaretag3'>new </div>) : (null)}
+                            {(props.unemployed.new) ? (<div className='Sqwaretag3' >new </div>) : (null)}
                        
                             {(props.unemployed.featured) ? (<div className='Sqwaretag2'>featured </div>) : (null)}
                           
@@ -39,7 +39,7 @@ const Card = (props) => {
                 </p>
             </div>
             <div className='tagContainer col-4' key ='props.unemployed.id'>
-                <Sqwaretag handleFilterButton={props.handleFilterButton} unemployed={props.unemployed}></Sqwaretag>
+                <Sqwaretag handleFilterButtonRole={props.handleFilterButtonRole} handleFilterButtonLang={props.handleFilterButtonLang} unemployed={props.unemployed}></Sqwaretag>
             </div>
 
 
