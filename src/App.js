@@ -13,16 +13,16 @@ function App() {
   });
   console.log(data);
   const handleFilterButtonLang = (event) => {
-    if (filterCriteria.languages.length === 0) {
-      return null;
-    } else {
-      setFilterCriteria(filterCriteria.languages.push(event.target.value));
-      console.log(filterCriteria);
-      let filtredData = data.filter((empl) =>
-        empl.language.includes(filterCriteria)
-      );
+    setFilterCriteria(filterCriteria.languages.push(event.target.value));
+    // if (filterCriteria.languages.length === 0) {
+    //   return null;
+    // } else {
+      let filtredData = data.filter((empl) =>{
+      console.log(empl)
+      return (empl.languages.includes(filterCriteria.languages))
+      })
       setJobsToRender(filtredData);
-    }
+    // }
   };
 
   const handleFilterButtonRole = (event) => {
