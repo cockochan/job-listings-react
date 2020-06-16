@@ -11,49 +11,43 @@ function App() {
     languages: [],
     role: [],
   });
-  console.log(data);
+  const [RolebuttonName, setRoleButtonName] = useState(null);
+
   const handleFilterButtonLang = (event) => {
-    setFilterCriteria(filterCriteria.languages.push(event.target.value));
+    setFilterCriteria(filterCriteria.languages.concat(event.target.value));
     // if (filterCriteria.languages.length === 0) {
     //   return null;
     // } else {
-      let filtredData = data.filter((empl) =>{
-      console.log(empl)
-      return (empl.languages.includes(filterCriteria.languages))
-      })
-      setJobsToRender(filtredData);
+    let filtredData = data.filter((empl) => {
+      console.log(empl);
+      return empl.languages.includes(filterCriteria.languages);
+    });
+    setJobsToRender(filtredData);
     // }
   };
 
   const handleFilterButtonRole = (event) => {
-    if (filterCriteria.languages.length === 0) {
-      return null;
-    } else {
-      setFilterCriteria(filterCriteria.role.push(event.target.value));
-      let filtredData = data.filter((empl) =>
-        empl.role.includes(filterCriteria.role)
-      );
-      setJobsToRender(filtredData);
-      console.log(filterCriteria);
-    }
+    setFilterCriteria(filterCriteria.role.push(event.target.value));
+    console.log(filterCriteria);
+    let filtredData = data.filter(
+      (empl) => empl.role === filterCriteria.role[0]
+    );
+    setRoleButtonName(event.target.value);
+    setJobsToRender(filtredData);
   };
   return (
     <div className="App">
       <Header className="header" />
 
       <div className="filterButtons">
-        {filterCriteria.role.map((buttn) => {
-          return (
-            <button
-              className="Sqwaretag"
-              key="123"
-              handleFilterButtonRole={handleFilterButtonRole}
-              handleFilterButtonLang={handleFilterButtonLang}
-            >
-              buttn
-            </button>
-          );
-        })}
+        <button
+          className="Sqwaretag"
+          key="123"
+          handleFilterButtonRole={handleFilterButtonRole}
+          handleFilterButtonLang={handleFilterButtonLang}
+        >
+          {RolebuttonName}
+        </button>
       </div>
 
       <div className="CardWrapper">
