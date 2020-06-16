@@ -14,16 +14,14 @@ function App() {
   const [RolebuttonName, setRoleButtonName] = useState(null);
 
   const handleFilterButtonLang = (event) => {
-    setFilterCriteria(filterCriteria.languages.concat(event.target.value));
-    // if (filterCriteria.languages.length === 0) {
-    //   return null;
-    // } else {
-    let filtredData = data.filter((empl) => {
-      console.log(empl);
-      return empl.languages.includes(filterCriteria.languages);
-    });
-    setJobsToRender(filtredData);
-    // }
+    // setFilterCriteria(filterCriteria.languages.push(event.target.value));
+
+    // let filtredData = data.filter((empl) => {
+    //   return empl.languages.includes(filterCriteria.languages);
+    // });
+    // setJobsToRender(filtredData);
+    // // }
+    console.log(filterCriteria);
   };
 
   const handleFilterButtonRole = (event) => {
@@ -35,19 +33,16 @@ function App() {
     setRoleButtonName(event.target.value);
     setJobsToRender(filtredData);
   };
+
   return (
     <div className="App">
       <Header className="header" />
 
       <div className="filterButtons">
-        <button
-          className="Sqwaretag"
-          key="123"
-          handleFilterButtonRole={handleFilterButtonRole}
-          handleFilterButtonLang={handleFilterButtonLang}
-        >
-          {RolebuttonName}
-        </button>
+        <button className="Sqwaretag">{RolebuttonName}</button>
+        {/* {filterCriteria.languages.map((lang) => {
+          return <button className="Sqwaretag">{lang}</button>;
+        })} */}
       </div>
 
       <div className="CardWrapper">
