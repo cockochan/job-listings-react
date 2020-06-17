@@ -7,42 +7,49 @@ let data = require("./data.json");
 
 function App() {
   const [jobsToRender, setJobsToRender] = useState(data);
-  const [filterCriteria, setFilterCriteria] = useState({
-    languages: [],
-    role: [],
-  });
-  const [RolebuttonName, setRoleButtonName] = useState(null);
+  const [filLanguages, setFilLanguages] = useState( [] );
+  const [filRole, setFilRole]=useState( [] )
+  const [filtredData, setFiltredData]=useState( [] )
+
+
 
   const handleFilterButtonLang = (event) => {
-    // setFilterCriteria(filterCriteria.languages.push(event.target.value));
+    setFilLanguages(filLanguages.concat(event.target.value));
 
     // let filtredData = data.filter((empl) => {
     //   return empl.languages.includes(filterCriteria.languages);
     // });
     // setJobsToRender(filtredData);
     // // }
-    console.log(filterCriteria);
+    
   };
 
   const handleFilterButtonRole = (event) => {
-    setFilterCriteria(filterCriteria.role.push(event.target.value));
-    console.log(filterCriteria);
-    let filtredData = data.filter(
-      (empl) => empl.role === filterCriteria.role[0]
-    );
-    setRoleButtonName(event.target.value);
-    setJobsToRender(filtredData);
+    setFilRole(filRole.concat(event.target.value));
+    let tempFiltredData=[];
+    console.log(filRole)
+    // for(let i=0;i===filRole.length;i++){
+    // tempFiltredData = data.filter(
+    //   (empl) => empl.role === filRole[i])
+      console.log(filRole)
+//       setFiltredData (filtredData.concat(tempFiltredData))
+      
+// }
+// setJobsToRender(filtredData);
   };
-
+ 
   return (
     <div className="App">
       <Header className="header" />
 
       <div className="filterButtons">
-        <button className="Sqwaretag">{RolebuttonName}</button>
-        {/* {filterCriteria.languages.map((lang) => {
-          return <button className="Sqwaretag">{lang}</button>;
-        })} */}
+      {!filRole? 'No filters' : filRole.map((role) => {
+          return <button className="Sqwaretag">{role}</button>
+        })}
+       
+        {!filLanguages? 'No filters' : filLanguages.map((lang) => {
+          return <button className="Sqwaretag">{lang}</button>
+        })}
       </div>
 
       <div className="CardWrapper">
